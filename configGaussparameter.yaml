@@ -1,0 +1,198 @@
+
+showEveryViewResult: False
+showVisualdom: False
+isSaveModel: False
+resultDirName: 'parameter'
+
+
+MSRCv1:
+  isRestore:  False
+  version: 001
+  layers: [ 512, 128, 32 ]
+  View_num: 5
+  ft_times: 200
+  learning_rate:  [0.0005]
+  T: 20
+  cost_ssc_param: [[1,0.001,0.001,0.001]] # [[1,100,100,100],[1,10,10,10],[1,1,1,1],[1,0.1,0.1,0.1],[1,0.01,0.01,0.01],[1,0.001,0.001,0.001]]
+  reg_ssc_param: [ 0.001 ]
+  reg_ssc_param_2: [ 0.001 ]
+  diver_param: [ 0.001]
+  Q_param: [ 0 ]
+  IV_param: [ 0.001]
+  lambdaL_param: [[ 100, 100, 100, 100 ]]
+  d: 2
+  ro: 3
+  isS: False
+  pretrain: False
+  loadW: False
+  IsD: 1
+  IsDDiverse: 1
+
+
+ORL_mtv:
+  isRestore:  False
+  version: 001
+  layers:    [512, 128, 32]
+  View_num: 3
+  ft_times:   600
+  T: 1000
+  learning_rate:  [0.00005] #[0.0001,0.0005,0.00001,0.00005]
+  cost_ssc_param:   [[1,100,100,100],[1,10,10,10],[1,1,1,1],[1,0.1,0.1,0.1],[1,0.01,0.01,0.01],[1,0.001,0.001,0.001]]
+  reg_ssc_param:   [0.0001]
+  reg_ssc_param_2: [ 0.001 ]
+  diver_param:   [0.001]
+  Q_param:   [0.001]
+  IV_param:   [0.001] #[0.001]
+  lambdaL_param:  [[100, 100, 100, 100]]
+  d:  6
+  ro: 4
+  isS: False
+  pretrain: False
+  loadW: False
+  IsD: 1
+  IsDDiverse: 1
+
+
+small_NUS:
+  isRestore:  False
+  version: 001
+  layers: [ 512, 128, 32 ]
+  View_num: 5
+  ft_times: 5
+  T: 1000
+  learning_rate:  [0.0005]
+  cost_ssc_param: [[1,100,100,100],[1,10,10,10],[1,1,1,1],[1,0.1,0.1,0.1],[1,0.01,0.01,0.01],[1,0.001,0.001,0.001]] #[[1, 1, 1, 1]]
+  reg_ssc_param: [ 0.0001 ]
+  diver_param: [ 0.001 ]
+  Q_param: [ 0.0001 ]
+  IV_param: [ 0.001 ]
+  lambdaL_param: [[ 100, 100, 100, 100]]
+  d: 11
+  ro: 7
+  isS: True
+  pretrain: False
+  loadW: True
+  IsD: 1
+  IsDDiverse: 1
+
+
+small_Reuters:
+  isRestore:  False
+  version: 001
+  layers: [ 512, 128, 32 ]
+  View_num: 5
+  ft_times: 50
+  T: 1000
+  learning_rate:  [0.0005]
+  cost_ssc_param: [[1, 1, 1, 1]] #[[1,100,100,100],[1,10,10,10],[1,1,1,1],[1,0.1,0.1,0.1],[1,0.01,0.01,0.01],[1,0.001,0.001,0.001]] #
+  reg_ssc_param:  [ 0.001 ]
+  reg_ssc_param_2:  [ 0.001 ]
+  diver_param: [ 100 ,10 ,1 ,0.1 ,0.01 ,0.001,0 ] # [ 0.001 ]
+  Q_param: [ 0.001 ]
+  IV_param: [ 0.001 ]
+  lambdaL_param: [[ 100, 100, 100, 100 ]]
+  d: 1
+  ro: 1
+  isS: False
+  pretrain: False
+  loadW: False
+  IsD: 1
+  IsDDiverse: 1
+
+
+Caltech10120:
+  isRestore:  False
+  version: 001
+  layers:    [512, 128, 32]
+  View_num: 6
+  ft_times:   50
+  T: 1000
+  learning_rate:  [0.0005]
+  cost_ssc_param:   [[1, 1, 1, 1]]
+  reg_ssc_param:   [0.001]
+  diver_param:   [0]
+  Q_param:   [0.001]
+  IV_param:   [0]
+  lambdaL_param:  [[1, 1, 1, 1]]
+  d:  12
+  ro: 8
+  isS: False
+  pretrain: False
+  loadW: False
+  IsD: 1
+  IsDDiverse: 1
+
+Reuters:
+  isRestore: False
+  version: 001
+  layers: [ 512, 128, 32 ]
+  View_num: 5
+  ft_times: 50
+  T: 1000
+  learning_rate: [ 0.0005]
+  cost_ssc_param: [[1,10,10,10]] # [[1,100,100,100],[1,10,10,10],[1,1,1,1],[1,0.1,0.1,0.1],[1,0.01,0.01,0.01],[1,0.001,0.001,0.001]] # [ [ 10, 10, 10, 10 ],[ 1, 1, 1, 1 ],[ 0.1, 0.1, 0.1, 0.1 ],[ 0.01, 0.01, 0.01, 0.01 ],[ 0.001, 0.001, 0.001, 0.001 ] ]
+  reg_ssc_param:   [ 0.0001 ]
+  reg_ssc_param_2: [ 0.0001 ]
+  diver_param: [ 100 ,10 ,1 ,0.1 ,0.01 ,0.001,0 ] # [ 0.01 ]
+  Q_param: [ 0.1 ]
+  IV_param: [ 0.01 ]
+  lambdaL_param: [ [ 100, 100, 100, 100 ] ]
+  d: 3
+  ro: 1
+  isS: False
+  pretrain: False
+  loadW: False
+  IsD: 1
+  IsDDiverse: 1
+
+Caltech101-7:
+  isRestore:  False
+  version: Caltech10173
+  layers:    [512,128, 32]
+  View_num: 6
+  ft_times:   200
+  T: 30
+  learning_rate:   [0.000001]
+  cost_ssc_param:   [[1, 10, 10, 10]]
+  reg_ssc_param:   [ 100 ]
+  diver_param:   [1 ]
+  Q_param:   [10 ]
+  IV_param:   [ 1]
+  lambdaL_param:  [[100, 100, 100, 100]]
+  d:  9
+  ro: 8
+  isS: False
+  pretrain: False
+  loadW: True
+  IsD: 1
+  IsDDiverse: 1
+
+HW:
+  isRestore:  False
+  version: 001
+  layers:    [512, 128, 32]
+  View_num: 6
+  ft_times:   300
+  T: 1000
+  learning_rate:  [0.0001]
+  cost_ssc_param: [[1, 1, 1, 0.1]] #[[1,100,100,100],[1,10,10,10],[1,1,1,1],[1,0.1,0.1,0.1],[1,0.01,0.01,0.01],[1,0.001,0.001,0.001]] #
+  reg_ssc_param:  [0.001]
+  reg_ssc_param_2:   [0.001]
+  diver_param:  [ 100 ,10 ,1 ,0.1 ,0.01 ,0.001,0 ] #  [0.001]
+  Q_param:   [0.001]
+  IV_param:   [0.001]
+  lambdaL_param:  [[100, 100, 100,100]]
+  d:  12
+  ro: 8
+  isS: False
+  pretrain: False
+  loadW: True
+  IsD: 1
+  IsDDiverse: 1
+
+
+
+
+
+
+
